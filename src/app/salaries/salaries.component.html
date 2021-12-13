@@ -1,0 +1,61 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title ">Les salaries</h4>
+                        <p class="card-category">List of all salaries</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="table-responsive">
+                            <table class="table">
+                                <thead class=" text-primary">
+                                    <th>
+                                        Matricule
+                                    </th>
+                                    <th>
+                                        Nom
+                                    </th>
+                                    <th>
+                                        Prenom
+                                    </th>
+                                    <th>
+                                        Email
+                                    </th>
+                                    <th>
+                                        Profile
+                                    </th>
+                                    <th>
+                                        Action
+                                    </th>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let item of salarieList">
+                                        <td>
+                                            {{item.idSal}}
+                                        </td>
+                                        <td>
+                                            {{item.nom}}
+                                        </td>
+                                        <td>
+                                            {{item.prenom}}
+                                        </td>
+                                        <td>{{item.email}}
+                                        </td>
+                                        <td>
+                                            {{item.profile}}
+                                        </td>
+                                        <td>
+                                            <i class="material-icons" style="cursor: pointer;" (click)="editAndConsultSalarieRedirection(item)">edit</i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                       </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>

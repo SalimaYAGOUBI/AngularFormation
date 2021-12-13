@@ -1,0 +1,205 @@
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                    <div class="card-header card-header-danger">
+                        <h4 class="card-title">Les informations d'un salarie</h4>
+                        <p class="card-category">Consulter et modifier un salarie</p>
+                    </div>
+                    <div class="card-body">
+                        <form>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Matricule" value={{salarie.idSal}}>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Nom" value={{salarie.nom}}>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                    <mat-form-field class="example-full-width">
+                                      <input matInput placeholder="Prenom" value={{salarie.prenom}}>
+                                    </mat-form-field>
+                                </div>
+                                <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Genre" value={{salarie.genre}}>
+                                  </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Date de naissance" value={{salarie.dateNaissance}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Etat" value={{salarie.etat}}>
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Telephone" value={{salarie.tel}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Eamil" value={{salarie.email}} type="email">
+                                  </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Adress" value={{salarie.adresse}}>
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="CIN" value={{salarie.cin}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Nom de banque" value={{salarie.nomBanque}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="RIB" value={{salarie.rib}}>
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="CV" value={{salarie.cv}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Profile" value={{salarie.profile}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Statue" value={{salarie.statue}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="CNSS" value={{salarie.cnss}}>
+                                </mat-form-field>
+                            </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Date d'emploi" value={{salarie.dateEmploi}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Salaire" value={{salarie.salaire}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Type de contrat" value={{salarie.typeContrat}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Dure de contrat" value={{salarie.dureContart}}>
+                                </mat-form-field>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-3">
+                                <mat-form-field class="example-full-width">
+                                  <input matInput placeholder="Role" value={{salarie.role}}>
+                                </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Service" value={{salarie.service.nomS}}>
+                                  </mat-form-field>
+                              </div>
+                              <div class="col-md-3">
+                                  <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Division" value={{salarie.division.name}}>
+                                  </mat-form-field>
+                              </div>                          
+                            </div>
+                            <button mat-raised-button type="submit" class="btn btn-danger pull-right">Update Profile</button>
+                            <div class="clearfix"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12">
+              <div class="card">
+                  <div class="card-header card-header-danger">
+                      <h4 class="card-title ">Les projets d'un salarie</h4>
+                      <p class="card-category">Les informations des projets</p>
+                  </div>
+                  <div class="card-body">
+                      <div class="table-responsive">
+                          <table class="table">
+                              <thead class=" text-primary">
+                                  <th>
+                                      Id
+                                  </th>
+                                  <th>
+                                      Nom
+                                  </th>
+                                  <th>
+                                      Date de creation
+                                  </th>
+                                  <th>
+                                      Budget
+                                  </th>
+                                  <th>
+                                      Montant payé
+                                  </th>
+                                  <th>
+                                      Proprietaire
+                                  </th>
+                              </thead>
+                              <tbody>
+                                  <tr *ngFor="let item of salarie.salarieProjet">
+                                      <td>
+                                          {{item.idpr}}
+                                      </td>
+                                      <td>
+                                          {{item.nompr}}
+                                      </td>
+                                      <td>
+                                          {{item.datecreation}}
+                                      </td>
+                                      <td>{{item.budget}}
+                                      </td>
+                                      <td>
+                                          {{item.proprietaire}}
+                                      </td>
+                                      <td>
+                                          <i class="material-icons" style="cursor: pointer;">edit</i>
+                                      </td>
+                                  </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+    </div>
+  </div>
+  
