@@ -20,4 +20,7 @@ export class SalarieService {
   getById(id: string) :  Observable<Salarie>{
     return this.http.get<Salarie>(baseUrl+"/"+id);
   }
+  addSalarie(salarie : Salarie) : Observable<Salarie>{
+    return this.http.post<Salarie>(baseUrl,salarie);
+  }
 }

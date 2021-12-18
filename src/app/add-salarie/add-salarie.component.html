@@ -4,182 +4,135 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header card-header-danger">
-                        <h4 class="card-title">Les informations d'un salarie</h4>
-                        <p class="card-category">Consulter et modifier un salarie</p>
+                        <h4 class="card-title">Ajouter</h4>
+                        <p class="card-category">Ajouter un nouveau salarie</p>
                     </div>
                     <div class="card-body">
-                      <form>
-                        <div class="row">
+                      <form novalidate [formGroup]="AddForm" (ngSubmit)="onSubmit(AddForm)">
+                        <div class="row" formGroupName="salarie">
                             <div class="col-md-3">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Matricule" value={{salarie.idSal}}>
+                                  <input matInput placeholder="Matricule" formControlName="idSal" >
                                 </mat-form-field>
                             </div>
                             <div class="col-md-3">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Nom" value={{salarie.nom}}>
+                                  <input matInput placeholder="Nom" formControlName="nom" >
                                 </mat-form-field>
                             </div>
                             <div class="col-md-3">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Prenom" value={{salarie.prenom}}>
+                                  <input matInput placeholder="Prenom" formControlName="prenom" >
                                 </mat-form-field>
                             </div>
                             <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Genre" value={{salarie.genre}}>
+                                <input matInput placeholder="Genre" formControlName="genre" >
+                              </mat-form-field>
+                            </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-md-3">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Date de naissance" formControlName="dateNaissance" >
+                              </mat-form-field>
+                          </div>
+                          <div class="col-md-3">
+                            <mat-form-field class="example-full-width">
+                              <input matInput placeholder="Etat" formControlName="etat" >
+                            </mat-form-field>
+                          </div>
+                          <div class="col-md-3">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Telephone" formControlName="tel" >
+                              </mat-form-field>
+                          </div>
+                          <div class="col-md-3">
+                              <mat-form-field class="example-full-width">
+                                <input matInput placeholder="Eamil" formControlName="email"  type="email">
                               </mat-form-field>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-3">
-                              <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Date de naissance" value={{salarie.dateNaissance}}>
-                              </mat-form-field>
-                          </div>
-                          <div class="col-md-3">
                             <mat-form-field class="example-full-width">
-                              <input matInput placeholder="Etat" value={{salarie.etat}}>
+                              <input matInput placeholder="Adress" formControlName="adresse" >
                             </mat-form-field>
                           </div>
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Telephone" value={{salarie.tel}}>
+                                <input matInput placeholder="CIN" formControlName="cin" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Eamil" value={{salarie.email}} type="email">
-                              </mat-form-field>
-                          </div>
-                        </div>
-                        <div class="row">
-                          <div class="col-md-3">
-                            <mat-form-field class="example-full-width">
-                              <input matInput placeholder="Adress" value={{salarie.adresse}}>
-                            </mat-form-field>
-                          </div>
-                          <div class="col-md-3">
-                              <mat-form-field class="example-full-width">
-                                <input matInput placeholder="CIN" value={{salarie.cin}}>
-                              </mat-form-field>
-                          </div>
-                          <div class="col-md-3">
-                              <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Nom de banque" value={{salarie.nomBanque}}>
+                                <input matInput placeholder="Nom de banque" formControlName="nomBanque" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                             <mat-form-field class="example-full-width">
-                              <input matInput placeholder="RIB" value={{salarie.rib}}>
+                              <input matInput placeholder="RIB" formControlName="rib" >
                             </mat-form-field>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="CV" value={{salarie.cv}}>
+                                <input matInput placeholder="CV" formControlName="cv" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Profile" value={{salarie.profile}}>
+                                <input matInput placeholder="Profile" formControlName="profile" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Statue" value={{salarie.statue}}>
+                                <input matInput placeholder="Statue" formControlName="statue" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                             <mat-form-field class="example-full-width">
-                              <input matInput placeholder="CNSS" value={{salarie.cnss}}>
+                              <input matInput placeholder="CNSS" formControlName="cnss" >
                             </mat-form-field>
                         </div>
                         </div>
                         <div class="row">
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Date d'emploi" value={{salarie.dateEmploi}}>
+                                <input matInput placeholder="Date d'emploi"  formControlName="dateEmploi" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Salaire" value={{salarie.salaire}}>
+                                <input matInput placeholder="Salaire"  formControlName="salaire" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                               <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Type de contrat" value={{salarie.typeContrat}}>
+                                <input matInput placeholder="Type de contrat"  formControlName="typeContrat" >
                               </mat-form-field>
                           </div>
                           <div class="col-md-3">
                             <mat-form-field class="example-full-width">
-                              <input matInput placeholder="Dure de contrat" value={{salarie.dureContart}}>
+                              <input matInput placeholder="Dure de contrat" formControlName="dureContart" >
                             </mat-form-field>
                           </div>
                         </div>
                         <div class="row">
                           <div class="col-md-3">
                             <mat-form-field class="example-full-width">
-                              <input matInput placeholder="Role" value={{salarie.role}}>
+                              <input matInput placeholder="Role"  formControlName="role" >
                             </mat-form-field>
-                          </div>
-                          <div class="col-md-3">
-                              <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Service" value={{salarie.service.nomS}}>
-                              </mat-form-field>
-                          </div>
-                          <div class="col-md-3">
-                              <mat-form-field class="example-full-width">
-                                <input matInput placeholder="Division" value={{salarie.division.name}}>
-                              </mat-form-field>
-                          </div>                          
+                          </div>                         
                         </div>
-                        <button mat-raised-button type="submit" class="btn btn-danger pull-right">Modifier</button>
+                        <button mat-raised-button type="submit" class="btn btn-danger pull-right" >Ajouter</button>
                         <div class="clearfix"></div>
                     </form>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="row">
-          <div class="col-md-12">
-              <div class="card">
-                  <div class="card-header card-header-danger">
-                      <h4 class="card-title ">Les projets d'un salarie</h4>
-                      <p class="card-category">Les informations des projets</p>
-                  </div>
-                  <div class="card-body">
-                      <div class="table-responsive">
-                          <table class="table">
-                              <thead class=" text-primary">
-                                  <th>
-                                      Id de projet
-                                  </th>
-                                  <th>
-                                    Role
-                                </th>
-                              </thead>
-                              <tbody>
-                                  <tr *ngFor="let item of salarieProjet">
-                                      <td>
-                                          {{item.id.idpr}}
-                                      </td>
-                                      <td>
-                                          {{item.roleSP}}
-                                      </td>
-                                      <td>
-                                          <i class="material-icons" style="cursor: pointer;">edit</i>
-                                      </td>
-                                  </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
     </div>
   </div>
   

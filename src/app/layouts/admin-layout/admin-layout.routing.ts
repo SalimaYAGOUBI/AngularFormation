@@ -10,6 +10,7 @@ import { NotificationsComponent } from '../../notifications/notifications.compon
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import { SalariesComponent } from 'app/salaries/salaries.component';
 import { UpdateConsultSalarieComponent } from 'app/update-consult-salarie/update-consult-salarie.component';
+import { AddSalarieComponent } from 'app/add-salarie/add-salarie.component';
 
 export const AdminLayoutRoutes: Routes = [
     // {
@@ -57,6 +58,7 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'salaries',      component: SalariesComponent },
     { path: 'salaries/:id',      component: UpdateConsultSalarieComponent },
+    { path: 'AddSalarie',      component: AddSalarieComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },
     { path: 'typography',     component: TypographyComponent },

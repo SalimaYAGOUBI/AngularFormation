@@ -19,6 +19,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
 import { SalariesComponent } from 'app/salaries/salaries.component';
 import { UpdateConsultSalarieComponent } from 'app/update-consult-salarie/update-consult-salarie.component';
+import { AddSalarieComponent } from 'app/add-salarie/add-salarie.component';
 
 @NgModule({
   imports: [
@@ -44,6 +45,7 @@ import { UpdateConsultSalarieComponent } from 'app/update-consult-salarie/update
     UpgradeComponent,
     SalariesComponent,
     UpdateConsultSalarieComponent,
+    AddSalarieComponent,
   ]
 })
 
